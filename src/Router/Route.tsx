@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Inscription from "../pages/inscription";
-import Users from '../pages/Users';
+import Login from '../pages/Login';
+import UsersTable from '../pages/Users';
 import Acceuil from '../pages/acceuil';
 import Nav from 'react-bootstrap/Nav'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -38,12 +38,11 @@ export default class Navs extends Component{
         
 <Routes>
 <Route  path="/" element={<Acceuil />}/>
-<Route  path="/inscription" element={<Inscription />}/>
-<Route  path="/users" element={<Users />}/>
+<Route  path="/inscription" element={<Login />}/>
+<Route  path="/users" element={<UsersTable/>}/>
 </Routes>
 
       </div>
     </Router>
   )
-}
-}
+}}
