@@ -1,11 +1,13 @@
-import React from "react";
 import { useForm } from 'react-hook-form';
 import { useRef } from "react";
 import "../App.css";
 import Form from 'react-bootstrap/Form'
 import Posts from '../Server/Post';
-import Button from 'react-bootstrap/Button'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from '@mui/material/Button';
+import SendIcon from '@mui/icons-material/Send';
+import Alert from '@mui/material/Alert';
+
+
 
 type UserSubmitForm = {
   
@@ -21,7 +23,8 @@ type UserSubmitForm = {
 const Inscription = () => {
 
  
-  const { register,  handleSubmit, formState:{isSubmitting}, formState:{ errors }, resetField, watch } = useForm<UserSubmitForm>();
+  const { register, handleSubmit, formState:{ errors }, resetField, watch } = useForm<UserSubmitForm>();
+
 
 
   const password = useRef({});
@@ -38,13 +41,12 @@ const Inscription = () => {
     resetField("confirmPassword");
    
     Posts (data)
-
   };
-   
   
+
   return (
 
-    <header className='App-header'>
+    <header className='inscription-header'>
         <form onSubmit={handleSubmit(submitForm)}>
     
           <div className="inputs">
@@ -60,10 +62,13 @@ const Inscription = () => {
                 required: 'Entrez votre Nom !' })}
             />
 
-      
-          {errors.firstname && errors.firstname.message}
+    {errors.firstname && (
 
+      <div className="error">
+        <Alert severity="error" variant="filled" >{errors.firstname && errors.firstname.message}</Alert>
+      </div>
 
+    )}
             </Form.Group>
 
 
@@ -74,9 +79,14 @@ const Inscription = () => {
               {...register('lastname',
                {required: 'Entrez votre Prénom !' })}               
               />
-         
-            {errors.lastname && errors.lastname.message}
+        
+    {errors.lastname && (
 
+      <div className="error">
+        <Alert severity="error" variant="filled" >{errors.lastname && errors.lastname.message}</Alert>
+      </div>
+
+    )}
             </Form.Group>
 
 
@@ -90,8 +100,13 @@ const Inscription = () => {
                  value.includes('@') || "Veuillez inclure '@'",})}
               />
        
-               {errors.email && errors.email.message}
+    {errors.email && (
 
+      <div className="error">
+        <Alert severity="error" variant="filled" >{errors.email && errors.email.message}</Alert>
+      </div>
+
+    )}
             </Form.Group>
 
 
@@ -106,8 +121,13 @@ const Inscription = () => {
                               message: "Votre mot de passe doit contenir min 8 caractères ! "
                               } })}/>
 
-              {errors.password && errors.password.message}
+    {errors.password && (
 
+      <div className="error">
+        <Alert severity="error" variant="filled" >{errors.password && errors.password.message}</Alert>
+      </div>
+
+    )}
             </Form.Group>
 
 
@@ -121,17 +141,25 @@ const Inscription = () => {
               value === password.current || "Votre Mot de passe ne correspond pas !"
               })}/>
 
-              {errors.confirmPassword && errors.confirmPassword.message}
+    {errors.confirmPassword && (
 
+      <div className="error">
+        <Alert severity="error" variant="filled" >{errors.confirmPassword && errors.confirmPassword.message}</Alert>
+      </div>
 
+    )}
             </Form.Group>
         </Form>
                 
      
              <br/>
+
+             <Button type="submit" variant="contained" startIcon={<SendIcon />}>
+
+             Envoyer
              
-             <button  disabled={isSubmitting} >Envoyer</button>
-            
+             </Button>
+      
           </div>
           </form>
           </header>
@@ -139,3 +167,4 @@ const Inscription = () => {
       );
 }
 export default Inscription;
+

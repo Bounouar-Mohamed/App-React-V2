@@ -1,10 +1,16 @@
 import React from 'react';
 
 
-
     function Acceuil(){
 
         return (
-           <div> hello </div>
-        )}
+<header className='acceuil-header'>
+
+<div>
+hello
+            </div>
+</header>
+
+
+      )}
 export default Acceuil;
