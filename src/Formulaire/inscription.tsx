@@ -26,10 +26,8 @@ const Inscription = () => {
   const { register, handleSubmit, formState:{ errors }, resetField, watch } = useForm<UserSubmitForm>();
 
 
-
   const password = useRef({});
   password.current = watch("password", "");
-
 
 
   const submitForm = (data:UserSubmitForm) => {
@@ -40,18 +38,21 @@ const Inscription = () => {
     resetField("password");
     resetField("confirmPassword");
    
+
     Posts (data)
+
   };
-  
+
 
   return (
 
-    <header className='inscription-header'>
+    <div className='inscription-header'>
         <form onSubmit={handleSubmit(submitForm)}>
     
-          <div className="inputs">
-    
-
+          <div className="shadow-box">
+    <label>Inscription:</label>
+    <br/>
+    <br/>
           <Form>
 
             <Form.Group className="mb-3">
@@ -154,15 +155,18 @@ const Inscription = () => {
      
              <br/>
 
-             <Button type="submit" variant="contained" startIcon={<SendIcon />}>
+<Button type="submit" variant="contained" startIcon={<SendIcon />}>
 
-             Envoyer
-             
-             </Button>
+Envoyer
+
+</Button>
+
+
+        
       
           </div>
           </form>
-          </header>
+          </div>
     
       );
 }

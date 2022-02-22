@@ -1,31 +1,42 @@
 .inscription-header {
 
-  background-color: #0e939c;
+  background-color: #77778a;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   text-align: center;
-  color: rgb(248, 19, 19);
-
+ 
 }
-.acceuil-header {
+.acceuil{
 
-  background-color: #0e939c;
+  background-color: #77778a;
   min-height: 100vh;
-
-
+ 
+}
+.hello-acceuil {
+  color: aqua;
+  position: absolute;
+  left: 44%;
+  top: 20%;
 }
 
 
 .users-header {
 
-  background-color: #0e939c;
+  background-color: #77778a;
   min-height: 100vh;
 
 
 }
 
+
+.shadow-box {
+  margin-left: 30%;
+  width: 40%;
+  background-color: #000000;
+  box-shadow: 3px 3px 5px 3px rgb(154, 185, 213);
+  border-radius: 5%;
+}
 
