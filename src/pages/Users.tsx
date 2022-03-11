@@ -1,5 +1,5 @@
 import GetUsers from "../Server/Get"
-
+import GetSneakers from "../Server/getSneakers";
 
 
 const UsersTable = () => {
@@ -9,6 +9,8 @@ const UsersTable = () => {
 
          <div>
             <GetUsers/>
+            <br/>
+            <GetSneakers/>
         </div>
 
         </header>

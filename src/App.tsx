@@ -1,4 +1,6 @@
-import Navs from "./Router/Route"
+import Navs from "./Router/PublicNav"
+
+
 
 export default function App () {
 

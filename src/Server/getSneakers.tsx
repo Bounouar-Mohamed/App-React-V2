@@ -1,20 +1,20 @@
 import {useState,useEffect } from 'react'
 import axios from 'axios';
-import Tables from '../Table/table';
+import TablesSneakers from '../Table/tablesSneakers';
 
-export interface Getting {
+export interface Getting2 {
     rows:any
 }
 
 
-const GetUsers = () => {
+const GetSneakers = () => {
 
-    const [data, setData] = useState<Getting[]>([]);
+    const [data, setData] = useState<Getting2[]>([]);
 
 
     useEffect(() => {
 
-        axios.get<Getting>("http://localhost:4000/users")
+        axios.get<Getting2>("http://localhost:4000/sneakers")
           .then(resp=>{
             setData(resp.data.rows)
             console.log("data fetched")
@@ -28,9 +28,9 @@ console.log("data:",data)
     return (
         
    <div>
-        <Tables data={data} title={''} fields={{}}  />
+        <TablesSneakers data={data} title={''} fields={{}}  />
 
    </div>
     )}
 
-export default GetUsers;
+export default GetSneakers;

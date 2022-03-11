@@ -1,15 +1,17 @@
 import { useForm } from 'react-hook-form';
-import { useRef } from "react";
+import { useRef,useState } from "react";
 import "../App.css";
 import Form from 'react-bootstrap/Form'
 import Posts from '../Server/Post';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import Alert from '@mui/material/Alert';
+import { BrowserRouter as Router, useNavigate } from "react-router-dom";
 
 
 
-type UserSubmitForm = {
+
+export type UserSubmitForm = {
   
   firstname: string;
   lastname: string;
@@ -22,12 +24,15 @@ type UserSubmitForm = {
 
 const Inscription = () => {
 
- 
-  const { register, handleSubmit, formState:{ errors }, resetField, watch } = useForm<UserSubmitForm>();
 
+  const navigate = useNavigate();
+
+  const { register, handleSubmit, formState:{ errors }, resetField, watch } = useForm<UserSubmitForm>();
+  const [loged,setLoged] = useState(false)
 
   const password = useRef({});
   password.current = watch("password", "");
+
 
 
   const submitForm = (data:UserSubmitForm) => {
@@ -40,20 +45,21 @@ const Inscription = () => {
    
 
     Posts (data)
-
-  };
-
+    navigate('/profile') 
+    console.log(data)
+    setLoged(true) 
+    
+}
 
   return (
 
     <div className='inscription-header'>
         <form onSubmit={handleSubmit(submitForm)}>
-    
           <div className="shadow-box">
-    <label>Inscription:</label>
+    <label>INSCRIPTION :</label>
     <br/>
     <br/>
-          <Form>
+          <Form >
 
             <Form.Group className="mb-3">
               <Form.Control

@@ -30,7 +30,7 @@ const data = props.data
 
        <MaterialTable
 
-          style={{height: 400, width: '90%', left: '5%', top: 100}}
+          style={{height: 450, width: '90%', left: '5%', top: 100}}
           columns={columns}
           data={data}
           title={"Users Data"}
