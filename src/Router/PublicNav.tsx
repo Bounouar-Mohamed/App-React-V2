@@ -33,7 +33,7 @@ import LogoutIcon from '@mui/icons-material/Logout';
       <NavDropdown
       title={<AccountCircleIcon/>}>       
 
-         <NavDropdown.Item href="/Profile">Profile</NavDropdown.Item>
+         <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>
          <NavDropdown.Item href="/connexion">Connexion</NavDropdown.Item>
          <NavDropdown.Item href="/inscription">Inscription</NavDropdown.Item>
          <NavDropdown.Item href="/users">Users</NavDropdown.Item>
