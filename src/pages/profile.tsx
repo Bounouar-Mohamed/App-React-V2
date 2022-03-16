@@ -27,6 +27,7 @@ const Profile = () => {
 
 },[]);
 
+
 console.log(name,lastName, email)
 
 

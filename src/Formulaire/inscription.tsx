@@ -48,7 +48,6 @@ const Inscription = () => {
     navigate('/profile') 
     console.log(data)
     setLoged(true) 
-    
 }
 
   return (
