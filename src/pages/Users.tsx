@@ -1,20 +1,21 @@
-import GetUsers from "../Server/Get"
-import GetSneakers from "../Server/getSneakers";
-
+import GetUsers from "../Services/GetUsers"
+import GetSneakers from "../Services/getSneakers";
+import PostSneakers from "../Services/PostSneakers";
 
 const UsersTable = () => {
 
-    return(
+    return (
         <header className="users-header">
 
-         <div>
-            <GetUsers/>
-            <br/>
-            <GetSneakers/>
-        </div>
+            <div>
+                <GetUsers />
+                <br />
+                <PostSneakers/>
+                <GetSneakers />
+            </div>
 
         </header>
-     
+
     )
 }
 export default UsersTable;

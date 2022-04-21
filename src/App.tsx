@@ -1,39 +1,47 @@
-import { BrowserRouter as
-  Router,
+import {
+  BrowserRouter as
+    Router,
   Routes,
   Route
 } from "react-router-dom";
-import Login from "./pages/Login";
-import UsersTable from './pages/Users';
-import Acceuil from './pages/acceuil';
-import Profile from "./pages/profile"
+import UsersTable from './Pages/Users';
+import Acceuil from './Pages/acceuil';
+import Profile from "./Pages/profile"
 import Navigation from "./Navbar/Navigation";
+import Inscription from "./Pages/inscription";
+import Connexion from './Pages/Connexion';
+import { useState } from 'react';
+
+function App() {
+
+   const [auth, setAuth] = useState(false)
 
 
- function App () {
+  return (
 
-  return(
 
-<Router>  
-    <div> 
+    <div>
 
-  <Navigation/>
-    
-    <Routes>
+      <Navigation />
 
-        <Route  path="/" element={<Acceuil />} />   
-        <Route  path="/Profile" element={<Profile/>}/>
-        <Route  path="/inscription" element={<Login />}/>
-        <Route  path="/users" element={<UsersTable/>}/>
-      
-    
-    </Routes>
+      <Routes>
+
+        <Route path="/" element={<Acceuil />} />
+        <Route path="/Profile" element={<Profile />} />
+        <Route path="/inscription" element={<Inscription />} />
+        <Route path="/users" element={<UsersTable />} />
+        <Route path="/connexion" element={<Connexion email={""} password={""} />} />
+
+
+      </Routes>
 
     </div>
-</Router>
 
 
-)}
-    
-  
+
+  )
+}
+
+
 export default App;
+
