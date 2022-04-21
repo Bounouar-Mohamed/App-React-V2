@@ -1,15 +1,23 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, BrowserRouter as Router } from 'react-router-dom';
+import UserProvider from './Contextes/UsersContexte';
+import { CookiesProvider } from "react-cookie";
+
 
 ReactDOM.render(
-  <React.StrictMode>
-   
-    <App />
- 
-  </React.StrictMode>,
+  <BrowserRouter>
+    <UserProvider>
+      <CookiesProvider>
+
+        <App />
+
+      </CookiesProvider>
+    </UserProvider>
+  </BrowserRouter>,
+
   document.getElementById('root')
 );
 
@@ -17,3 +25,6 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+
+// 08021998
