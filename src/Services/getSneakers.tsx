@@ -132,7 +132,7 @@ const GetSneakers = () => {
 
     function Shellsort() {
 
-
+        // printArray
         let arr: any[] = []
 
         for (let i = 0; i < data.length; i += 1) {
@@ -143,12 +143,15 @@ const GetSneakers = () => {
             )
         }
 
+        // sort arr
+        // [34,56,84,56,64]
+
         let n = arr.length;
         for (let gap = Math.floor(n / 2); gap > 0; gap = Math.floor(gap / 2)) {
 
             for (let i = gap; i < n; i += 1) {
 
-                let temp = arr[i];
+                let temp = arr[i]
 
                 let j;
                 for (j = i; j >= gap && arr[j - gap] > temp; j -= gap)

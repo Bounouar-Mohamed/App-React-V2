@@ -1,5 +1,5 @@
 import { useForm } from 'react-hook-form';
-import { useRef, useContext, useState, useEffect } from "react";
+import { useRef, useContext, useState } from "react";
 import Form from 'react-bootstrap/Form'
 import Button from '@mui/material/Button';
 import Alert from '@mui/material/Alert';
@@ -25,9 +25,7 @@ type User = {
   email: string;
 }
 
-
 const Connexion = (props: UserConnectForm) => {
-
 
   const InfoUser = useContext(UserContext);
 
@@ -86,7 +84,7 @@ const Connexion = (props: UserConnectForm) => {
 
   return (
 
-    <div> 
+    <div>
 
       <Form onSubmit={handleSubmit(submitLogin)} >
 

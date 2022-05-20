@@ -1,13 +1,13 @@
-import { useForm, useFormState } from 'react-hook-form';
-import { useRef, useState } from "react";
+import { useForm } from 'react-hook-form';
+import { useRef } from "react";
 import "../App.css";
 import Form from 'react-bootstrap/Form'
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import Alert from '@mui/material/Alert';
 import { BrowserRouter as Router, useNavigate } from "react-router-dom";
-// import PostRegistration from '../Server/PostRegistration';
 import axios from 'axios';
+
 
 export type UserSubmitForm = {
 
@@ -81,6 +81,7 @@ const Inscription = () => {
         <label>INSCRIPTION :</label>
         <br />
         <br />
+
         <Form onSubmit={handleSubmit(submitForm)}>
 
           <Form.Group className="mb-3">
@@ -123,6 +124,7 @@ const Inscription = () => {
           <Form.Group className="mb-3" >
             <Form.Control
               type="email"
+              className="email"
               placeholder="Email..."
               {...register('email',
                 {
@@ -185,11 +187,9 @@ const Inscription = () => {
             )}
           </Form.Group>
 
-
-
           <br />
 
-          <Button type="submit" variant="contained" startIcon={<SendIcon />}>
+          <Button type="submit" variant="contained" className='button' startIcon={<SendIcon />}>
 
             Envoyer
 

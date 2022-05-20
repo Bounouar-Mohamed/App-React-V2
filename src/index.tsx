@@ -5,17 +5,20 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, BrowserRouter as Router } from 'react-router-dom';
 import UserProvider from './Contextes/UsersContexte';
 import { CookiesProvider } from "react-cookie";
+import ErrorBoundary from "./Components/ErrorBoundaries"
 
 
 ReactDOM.render(
   <BrowserRouter>
+   <Router> 
     <UserProvider>
       <CookiesProvider>
-
-        <App />
-
+        <ErrorBoundary> 
+         <App />
+        </ErrorBoundary>
       </CookiesProvider>
     </UserProvider>
+    </Router>
   </BrowserRouter>,
 
   document.getElementById('root')
@@ -27,4 +30,3 @@ ReactDOM.render(
 reportWebVitals();
 
 
-// 08021998

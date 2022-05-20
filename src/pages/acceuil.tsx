@@ -1,4 +1,4 @@
-import { useState, useEffect, SetStateAction } from 'react';
+import { useState, useEffect } from 'react';
 import "../App.css";
 import { Image } from 'semantic-ui-react'
 import img from '../articles/Cartouche.jpg'
