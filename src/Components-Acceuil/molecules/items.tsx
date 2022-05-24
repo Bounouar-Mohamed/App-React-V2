@@ -1,7 +1,6 @@
 import { useState } from 'react'
-import Cartouche from '../molecules/Cartouche.jpg'
 import Text from '../atoms/description';
-
+import Cartouche from '../../images/Cartouche.jpg'
 
 export interface Click {
 

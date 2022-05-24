@@ -21,7 +21,6 @@ function App() {
 
       <Navigation />
 
-  
         <Routes>
 
           <Route path="/" element={<Acceuil />} />
@@ -32,7 +31,6 @@ function App() {
 
 
         </Routes>
-     
     </div>
 
 

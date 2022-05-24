@@ -44,8 +44,9 @@
   display: flex;
   justify-content: space-between;
   background-color: #000000;
-  padding: 18em;
+  padding: 10em;
   min-height: 100vh;
+  margin-left: center;
 }
 
 .profile-shadow {
