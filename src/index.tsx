@@ -10,7 +10,6 @@ import ErrorBoundary from "./Components/ErrorBoundaries"
 
 ReactDOM.render(
   <BrowserRouter>
-   <Router> 
     <UserProvider>
       <CookiesProvider>
         <ErrorBoundary> 
@@ -18,7 +17,6 @@ ReactDOM.render(
         </ErrorBoundary>
       </CookiesProvider>
     </UserProvider>
-    </Router>
   </BrowserRouter>,
 
   document.getElementById('root')
