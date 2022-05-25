@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Text from '../atoms/description';
-import Cartouche from '../../images/Cartouche.jpg'
+import Cartouche from '../../Assets/Cartouche.jpg'
 
 export interface Click {
 
