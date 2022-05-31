@@ -208,18 +208,10 @@
 .button {
   position: relative;
   border-radius: 5%;
-  margin-left: -15%;
   height: 50px;
   background-color: #48C029;
   font-family: 'Open Sans'
 
-}
-
-.button-Login{
-  position:abso;
-
-  justify-content: center;
-  margin-top: 5%;
 }
 
 

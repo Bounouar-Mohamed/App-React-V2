@@ -101,7 +101,7 @@ export default function Login(props: Password) {
                 
                 <br />
                 
-                <button className='button' style={{ width: 350, marginLeft: -375, marginTop: 10 }} type="submit">
+                <button className='button' style={{ width: 350, marginLeft: -120, marginTop: 10 }} type="submit">
 
                     Let's Go!
 
