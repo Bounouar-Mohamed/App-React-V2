@@ -93,3 +93,199 @@
   top: 100px;
   left: 75%;
 }
+
+.body-twitter {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e9e9e9;
+}
+
+.left-twitter {
+  position: relative;
+  left: -25%;
+}
+
+.logo-twitter {
+  display: flex;
+  width: 499px;
+  position: relative;
+  top: -160px;
+  left: 10px;
+  font-size: 1.8em;
+}
+
+
+.input-firstname {
+  margin-left: -115%;
+  width: 10em;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000000;
+  font-family: 'Open Sans'
+}
+
+.error-firstname {
+  position: absolute;
+  margin-left: -13%;
+  color: red;
+  font-family: 'Open Sans'
+}
+
+
+.input-lastName {
+  margin-left: -90%;
+  width: 10em;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000000;
+  font-family: 'Open Sans'
+}
+
+.error-lastName {
+  position: absolute;
+  margin-left: -9.5%;
+  color: red;
+  font-family: 'Open Sans'
+}
+
+.input-email {
+  margin-top: 30px;
+  margin-left: -55%;
+  width: 23em;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000000;
+  font-family: 'Open Sans'
+}
+
+.error-email {
+  position: absolute;
+  margin-left: -9.5%;
+  color: red;
+  font-family: 'Open Sans'
+}
+
+.input-password {
+  margin-top: 30px;
+  margin-left: -55%;
+  width: 23em;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000000;
+  font-family: 'Open Sans'
+}
+
+.error-password {
+  position: absolute;
+  margin-left: -9.5%;
+  color: red;
+  font-family: 'Open Sans'
+}
+
+
+.two-inputs {
+  margin-top: 150px;
+  margin-left: -5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Open Sans'
+}
+
+
+.formulaire {
+  margin-left: 100%;
+}
+
+
+.inputs-align {
+  margin-left: -250px;
+}
+
+
+.button {
+  position: relative;
+  border-radius: 5%;
+  margin-left: -15%;
+  height: 50px;
+  background-color: #48C029;
+  font-family: 'Open Sans'
+
+}
+
+.button-Login{
+  position:abso;
+
+  justify-content: center;
+  margin-top: 5%;
+}
+
+
+.button-Google {
+  background-image: url('./Assets/Google.png');
+  background-size:7%;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-position: 20%;
+  position: absolute;
+  border-radius: 5%;
+  margin-left: -25%;
+  height: 50px;
+  width: 350px;
+  margin-top: 8%;
+  font-family: 'Open Sans'
+}
+
+.destock {
+  margin-top: -50px;
+  height: 600px;
+  width: 400px;
+  margin-left: 20%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+
+.describe-text {
+  width: 450px;
+  margin-top: -25%;
+  font-size: 27px;
+  font-weight: 800;
+  text-align: justify;
+  font-family: 'Open Sans'
+}
+
+
+.Apploye-image{
+  position: absolute;
+  margin-top: 150px;
+  margin-left: -300px;
+  height: 250px;
+  width: 500px;
+}
+
+
+.Apploye-logo{
+  position: absolute;
+  margin-top: -300px;
+  margin-left: -470px;
+  height: 100px;
+  width: 200px;
+}
+
+
+.footer{
+  margin-top: 130px;
+  font-weight: 200;
+  text-align: center;
+  font-family: 'Open Sans';
+  background-color: gree;
+}
+
+.CheckList{
+  margin-top: 50px;
+  margin-left: -140px;
+}

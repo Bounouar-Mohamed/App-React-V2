@@ -10,6 +10,10 @@ import Profile from "./Pages/profile"
 import Navigation from "./Navbar/Navigation";
 import Inscription from "./Pages/inscription";
 import Connexion from './Pages/Connexion';
+import Finish from "./Apploye/templates/Desktop";
+
+
+
 
 function App() {
 
@@ -28,6 +32,7 @@ function App() {
           <Route path="/Profile" element={<Profile />} />
           <Route path="/inscription" element={<Inscription />} />
           <Route path="/users" element={<UsersTable />} />
+          <Route path="/apploye" element={<Finish />} />
           <Route path="/connexion" element={<Connexion email={""} password={""} />} />
 
 

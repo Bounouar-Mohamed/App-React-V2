@@ -33,6 +33,7 @@ export default function Navigation() {
             <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>
             <NavDropdown.Item href="/connexion">Connexion</NavDropdown.Item>
             <NavDropdown.Item href="/inscription">Inscription</NavDropdown.Item>
+            <NavDropdown.Item href="/apploye">Apploye</NavDropdown.Item>
             <NavDropdown.Item href="/users">Users</NavDropdown.Item>
 
           </NavDropdown>

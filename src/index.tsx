@@ -11,11 +11,11 @@ import ErrorBoundary from "./Components/ErrorBoundaries"
 ReactDOM.render(
   <BrowserRouter>
     <UserProvider>
-      <CookiesProvider>
-        <ErrorBoundary> 
-         <App />
-        </ErrorBoundary>
-      </CookiesProvider>
+        <CookiesProvider>
+          <ErrorBoundary>
+            <App />
+          </ErrorBoundary>
+        </CookiesProvider>
     </UserProvider>
   </BrowserRouter>,
 
