@@ -53,7 +53,7 @@ export default function TranslationButton() {
 
     return (
 
-        <div className='Translation-button' style={{ width: 100, height: 40, position: 'absolute', marginTop: -370, marginLeft: 1150, color: toggle === false ? "#ffffff" : "#000000" }} >
+        <div className='Translation-button' style={{ width: 100, height: 40, position: 'absolute', marginTop: -760, marginLeft: 1200, color: toggle === false ? "#ffffff" : "#000000" }} >
 
             <SwitchSelector
                 onChange={toggler}
