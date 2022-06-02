@@ -49,7 +49,7 @@ export default function Login(props: Password) {
 
         }
 
-    },[tpassword]) // cest la ton pb
+    },[tpassword])
 
 
     const submitLogin = async (data: UserConnectForm) => {
@@ -115,13 +115,16 @@ export default function Login(props: Password) {
 
                 <button className='button' style={{ width: 350, marginLeft: -120, marginTop: 10 }} type="submit">
 
-                    Let's Go!
+                {t('Button.0')}
 
                 </button>
 
                 <button className='button-Google' style={{ marginTop: 70 }} >
-                {t('ButtonGoogle.0')}
+
+                {t('ButtonGoogle.1')}
+                
                 </button>
+
             </div>
 
         </Form>

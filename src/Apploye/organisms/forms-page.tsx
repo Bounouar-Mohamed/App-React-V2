@@ -20,7 +20,8 @@ export default function FormsPage() {
 
         <div className='destock'>
 
-            <Switch handleChange={toggler} />
+
+            <Switch  handleChange={toggler}  />
 
             {toggle ? <span>
 
@@ -31,7 +32,6 @@ export default function FormsPage() {
                 <Registration />
 
             </span>}
-
 
         </div>
 

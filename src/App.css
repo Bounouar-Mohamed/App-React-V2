@@ -133,7 +133,7 @@
 }
 
 .input-lastName {
-  display: 'flex';
+  display: "flex";
   margin-left: -90%;
   width: 10em;
   background: transparent;
@@ -270,4 +270,38 @@
 .CheckList {
   margin-top: 50px;
   margin-left: -140px;
+}
+
+.button-fr {
+  width: 80px;
+  background-color: #AEDFA1;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-color:transparent ;
+}
+
+.button-fr:focus {
+  background-color: #48C029;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: white;
+}
+
+.button-en {
+  width: 80px;
+  background-color: #AEDFA1;
+  border-color:transparent ;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.button-en:focus {
+  background-color: #48C029;
+  color: white;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.button-en:link {
+  background-color: lightblue;
+
 }

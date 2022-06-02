@@ -1,5 +1,5 @@
 import Login from "./Login";
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { PasswordContext } from '../../Contextes/PasswordContexte';
 import PasswordProvider from '../../Contextes/PasswordContexte';
 import { useTranslation } from "react-i18next";
@@ -9,26 +9,30 @@ export default function CheckList() {
 
 
     const { password } = useContext(PasswordContext);
-    console.log(password)
+
+    const [lenght, setLenght] = useState<string | number>("")
+    const [pattern, setPattern] = useState<boolean>()
+
 
     useEffect(() => {
 
         if (password !== undefined) {
-            console.log(password)
-        }
+            setLenght(password.length);
+
+    }
     }, [password])
+
 
     function containsNumber(str: any) {
         return /[0-9]/.test(str);
     }
 
-    let specialChars = new RegExp(`\`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~`);
 
     let regExp = /[a-zA-Z]/
+    let specialChars = /[`\`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~`]/
 
-    
+
     const { t, i18n } = useTranslation();
-
 
 
     return (
@@ -37,9 +41,9 @@ export default function CheckList() {
 
             <span style={{ color: regExp.test(password) ? "#008000" : '' }} >  {t("CheckList.0")}  </span>
             <br />
-            {/* <span style={{ color: password.length >= 6 ? "#008000" : '' }} >   {t("CheckList.1")}  </span> */}
+            <span style={{ color: lenght >= 6 ? "#008000" : '' }} >   {t("CheckList.1")}  </span>
             <br />
-            {/* <span style={{ color: password.test(password) ? "#008000" : '' }}>  {t("CheckList.2")}  </span> */}
+            <span style={{ color: specialChars.test(password) ? "#008000" : '' }}>  {t("CheckList.2")}  </span>
             <br />
             <span style={{ color: containsNumber(password) ? "#008000" : '' }} >   {t("CheckList.3")} </span>
 

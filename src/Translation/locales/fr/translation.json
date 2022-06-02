@@ -20,7 +20,8 @@
   },
 
   "ButtonGoogle": {
-    "0": "S'inscrire avec Google"
+    "0": "S'inscrire avec Google",
+    "1": " Se connecter avec Google "
   },
 
   "FirstName": {

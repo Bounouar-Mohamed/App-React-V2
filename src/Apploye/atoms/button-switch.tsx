@@ -21,8 +21,8 @@ export default function Switch(props: toogle) {
                 foo: false
             },
             selectedBackgroundColor: "#48C029",
-            selectedColor: '#ffffff'
-
+            selectedColor: '#ffffff',
+            Color:'#ffffff'
 
         },
         {
@@ -40,7 +40,7 @@ export default function Switch(props: toogle) {
 
     return (
 
-        <div className='title-twitter' style={{ width: 200, height: 40, position: 'absolute', marginTop: 80, marginLeft: 20, color: props.handleChange === false ? "#ffffff" :"#000000"  }} >
+        <div className='title-twitter' style={{ width: 200, height: 40, position: 'absolute', marginTop: 80, marginLeft: 20, color: props.handleChange === false ? "#ffffff" :"#000000" }} >
 
             <SwitchSelector
                 onChange={props.handleChange}
