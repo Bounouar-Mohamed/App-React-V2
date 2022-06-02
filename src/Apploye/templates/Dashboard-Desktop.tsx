@@ -1,10 +1,14 @@
-import LoginPage from "../organisms/loginPage"
+import FormsPage from "../organisms/forms-page"
 import Description from "../atoms/description"
 import Apploye from '../../Assets/image_2022-05-29_013223347 (1).jpg'
 import Logo from '../../Assets/logo-Apploye.svg'
+import ButtonLanguage from '../../Translation/Translation-Button';
 
-export default function Finish() {
 
+export default function Desktop() {
+
+
+    
     return (
 
 
@@ -13,11 +17,12 @@ export default function Finish() {
 
             <Description />
 
-
             <img className='Apploye-image' src={Apploye} />
             <img className='Apploye-logo' src={Logo} />
 
-            <LoginPage />
+            <FormsPage />
+
+            <ButtonLanguage />
 
         </div>
 

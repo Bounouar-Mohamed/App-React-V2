@@ -1,45 +1,48 @@
 import Login from "./Login";
-import { useContext } from 'react';
-import { PasswordContext } from '../atoms/PasswordContexte';
-import PasswordProvider from "../atoms/PasswordContexte";
+import { useContext, useEffect } from 'react';
+import { PasswordContext } from '../../Contextes/PasswordContexte';
+import PasswordProvider from '../../Contextes/PasswordContexte';
+import { useTranslation } from "react-i18next";
 
 
 export default function CheckList() {
 
 
-    const Password = useContext(PasswordContext);
+    const { password } = useContext(PasswordContext);
+    console.log(password)
 
-    console.log(Password?.password)
+    useEffect(() => {
 
+        if (password !== undefined) {
+            console.log(password)
+        }
+    }, [password])
 
     function containsNumber(str: any) {
         return /[0-9]/.test(str);
     }
 
-    let specialChars = `\`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~`;
-
-
+    let specialChars = new RegExp(`\`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~`);
 
     let regExp = /[a-zA-Z]/
 
-
-
+    
+    const { t, i18n } = useTranslation();
 
 
 
     return (
-        <PasswordProvider>
-            <div className='CheckList'>
 
-                <span style={{ color: regExp.test(Password?.password) ? "#008000" : '' }} >  ○ Contenir au moins une lettre  </span>
-                <br />
-                <span style={{ color: Password?.password.length >= 6 ? "#008000" : '' }} >   ○ Fair au moins 6 caractères  </span>
-                <br />
-                <span style={{ color: specialChars.indexOf(Password?.password) ? "#008000" : '' }}>   ○ Contenir au moins un caractère 				      												spécial  </span>
-                <br />
-                <span style={{ color: containsNumber(Password?.password) ? "#008000" : '' }} >   ○ Contenir au moins un chiffre </span>
+        <div className='CheckList'>
 
-            </div>
-        </PasswordProvider>
+            <span style={{ color: regExp.test(password) ? "#008000" : '' }} >  {t("CheckList.0")}  </span>
+            <br />
+            {/* <span style={{ color: password.length >= 6 ? "#008000" : '' }} >   {t("CheckList.1")}  </span> */}
+            <br />
+            {/* <span style={{ color: password.test(password) ? "#008000" : '' }}>  {t("CheckList.2")}  </span> */}
+            <br />
+            <span style={{ color: containsNumber(password) ? "#008000" : '' }} >   {t("CheckList.3")} </span>
+
+        </div>
     )
 }

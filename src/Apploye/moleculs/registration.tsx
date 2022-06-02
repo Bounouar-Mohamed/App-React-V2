@@ -1,7 +1,8 @@
 import { useState, useContext } from 'react';
 import Form from 'react-bootstrap/Form'
 import { useForm } from 'react-hook-form';
-
+import { useTranslation } from 'react-i18next';
+import Footer from '../atoms/footer';
 
 
 
@@ -20,6 +21,8 @@ export default function Registration() {
 
 
     const { register, handleSubmit, formState: { errors } } = useForm<UserConnectForm>();
+
+    const { t, i18n } = useTranslation();
 
 
     const submitLogin = async (data: UserConnectForm) => {
@@ -40,7 +43,7 @@ export default function Registration() {
                         <input
                             className='input-firstname'
                             type="texte"
-                            placeholder="firstName..."
+                            placeholder={t('FirstName.0')}
                             {...register('firstName')}
                         />
                     </Form.Group>
@@ -51,7 +54,7 @@ export default function Registration() {
                         <input
                             className='input-lastName'
                             type="texte"
-                            placeholder="Last Name..."
+                            placeholder={t('LastName.0')}
                             {...register('lastName',
                                 {
                                     required: 'Enter your lastName !',
@@ -76,7 +79,7 @@ export default function Registration() {
                         <input
                             className='input-email'
                             type="email"
-                            placeholder="Email..."
+                            placeholder="E-mail..."
                             {...register('email',
                                 {
                                     required: 'Enter your email !',
@@ -98,7 +101,7 @@ export default function Registration() {
                         <input
                             className='input-password'
                             type="password"
-                            placeholder="password..."
+                            placeholder={t('Password.0')}
                             {...register('password',
                                 {
                                     required: 'Enter your passsword !',
@@ -121,16 +124,18 @@ export default function Registration() {
 
                 <button className='button' style={{ width: 350, marginLeft: -375, marginTop: 50 }} type="submit">
 
-                    Let's Go!
+                    {t("Button.0")}
 
                 </button>
 
                 <button className='button-Google'>
-                    Sign up with Google
+
+                    {t("ButtonGoogle.0")}
+
                 </button>
 
             </Form>
-
+            <Footer />
         </div>
 
     )

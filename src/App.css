@@ -116,38 +116,37 @@
   font-size: 1.8em;
 }
 
-
 .input-firstname {
   margin-left: -115%;
   width: 10em;
   background: transparent;
   border: none;
   border-bottom: 1px solid #000000;
-  font-family: 'Open Sans'
+  font-family: "Open Sans";
 }
 
 .error-firstname {
   position: absolute;
   margin-left: -13%;
   color: red;
-  font-family: 'Open Sans'
+  font-family: "Open Sans";
 }
 
-
 .input-lastName {
+  display: 'flex';
   margin-left: -90%;
   width: 10em;
   background: transparent;
   border: none;
   border-bottom: 1px solid #000000;
-  font-family: 'Open Sans'
+  font-family: "Open Sans";
 }
 
 .error-lastName {
   position: absolute;
   margin-left: -9.5%;
   color: red;
-  font-family: 'Open Sans'
+  font-family: "Open Sans";
 }
 
 .input-email {
@@ -157,14 +156,14 @@
   background: transparent;
   border: none;
   border-bottom: 1px solid #000000;
-  font-family: 'Open Sans'
+  font-family: "Open Sans";
 }
 
 .error-email {
   position: absolute;
   margin-left: -9.5%;
   color: red;
-  font-family: 'Open Sans'
+  font-family: "Open Sans";
 }
 
 .input-password {
@@ -174,16 +173,15 @@
   background: transparent;
   border: none;
   border-bottom: 1px solid #000000;
-  font-family: 'Open Sans'
+  font-family: "Open Sans";
 }
 
 .error-password {
   position: absolute;
   margin-left: -9.5%;
   color: red;
-  font-family: 'Open Sans'
+  font-family: "Open Sans";
 }
-
 
 .two-inputs {
   margin-top: 150px;
@@ -191,33 +189,29 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Open Sans'
+  font-family: "Open Sans";
 }
-
 
 .formulaire {
   margin-left: 100%;
 }
 
-
 .inputs-align {
   margin-left: -250px;
 }
-
 
 .button {
   position: relative;
   border-radius: 5%;
   height: 50px;
-  background-color: #48C029;
-  font-family: 'Open Sans'
-
+  background-color: #48c029;
+  font-family: "Open Sans";
+  color: white;
 }
 
-
 .button-Google {
-  background-image: url('./Assets/Google.png');
-  background-size:7%;
+  background-image: url("./Assets/Google.png");
+  background-size: 7%;
   background-repeat: no-repeat;
   background-color: white;
   background-position: 20%;
@@ -227,7 +221,7 @@
   height: 50px;
   width: 350px;
   margin-top: 8%;
-  font-family: 'Open Sans'
+  font-family: "Open Sans";
 }
 
 .destock {
@@ -240,27 +234,24 @@
   border-radius: 10px;
 }
 
-
 .describe-text {
   width: 450px;
-  margin-top: -25%;
+  margin-top: -45%;
   font-size: 27px;
   font-weight: 800;
   text-align: justify;
-  font-family: 'Open Sans'
+  font-family: "Open Sans";
 }
 
-
-.Apploye-image{
+.Apploye-image {
   position: absolute;
-  margin-top: 150px;
-  margin-left: -300px;
+  margin-top: 100px;
+  margin-left: -310px;
   height: 250px;
   width: 500px;
 }
 
-
-.Apploye-logo{
+.Apploye-logo {
   position: absolute;
   margin-top: -300px;
   margin-left: -470px;
@@ -268,16 +259,15 @@
   width: 200px;
 }
 
-
-.footer{
+.footer {
   margin-top: 130px;
   font-weight: 200;
   text-align: center;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   background-color: gree;
 }
 
-.CheckList{
+.CheckList {
   margin-top: 50px;
   margin-left: -140px;
 }

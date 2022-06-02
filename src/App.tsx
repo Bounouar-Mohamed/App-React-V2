@@ -10,8 +10,7 @@ import Profile from "./Pages/profile"
 import Navigation from "./Navbar/Navigation";
 import Inscription from "./Pages/inscription";
 import Connexion from './Pages/Connexion';
-import Finish from "./Apploye/templates/Desktop";
-
+import Desktop from "./Apploye/templates/Dashboard-Desktop";
 
 
 
@@ -32,7 +31,7 @@ function App() {
           <Route path="/Profile" element={<Profile />} />
           <Route path="/inscription" element={<Inscription />} />
           <Route path="/users" element={<UsersTable />} />
-          <Route path="/apploye" element={<Finish />} />
+          <Route path="/apploye" element={<Desktop />} />
           <Route path="/connexion" element={<Connexion email={""} password={""} />} />
 
 

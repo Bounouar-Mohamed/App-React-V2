@@ -1,43 +1,46 @@
-import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import SwitchSelector from "react-switch-selector";
 
 
 
 export interface toogle {
 
-    handleChange:any
+    handleChange: any
 }
 
 
-export default function Switch(props:toogle) {
+export default function Switch(props: toogle) {
 
-    const [toggle, setToggle] = useState<toogle|boolean>()
+    const { t, i18n } = useTranslation();
 
 
-    const toggler = () => {
-        toggle ? setToggle(false) : setToggle(true)
-    }
-    
-    
     const options = [
         {
-            label: <span>Sign in</span>,
+            label: <span> {t("SignIn.0")}</span>,
             value: {
-                foo: true
+                foo: false
             },
             selectedBackgroundColor: "#48C029",
+            selectedColor: '#ffffff'
+
+
         },
         {
-            label: "Sign up",
+            label: <span> {t("SignUp.0")} </span> ,
             value: "bar",
-            selectedBackgroundColor: "#48C029"
+            selectedBackgroundColor: "#48C029",
+            selectedColor: '#ffffff'
+
         }
     ];
 
+    
+
+    
 
     return (
 
-        <div className='title-twitter' style={{ width: 200, height: 40, position: 'absolute', marginTop: 80, marginLeft: 20 }} >
+        <div className='title-twitter' style={{ width: 200, height: 40, position: 'absolute', marginTop: 80, marginLeft: 20, color: props.handleChange === false ? "#ffffff" :"#000000"  }} >
 
             <SwitchSelector
                 onChange={props.handleChange}
@@ -45,6 +48,7 @@ export default function Switch(props:toogle) {
                 backgroundColor={"#AEDFA1"}
 
             />
+
         </div>
     )
 }

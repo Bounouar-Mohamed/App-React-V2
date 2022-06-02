@@ -6,16 +6,23 @@ import { BrowserRouter, BrowserRouter as Router } from 'react-router-dom';
 import UserProvider from './Contextes/UsersContexte';
 import { CookiesProvider } from "react-cookie";
 import ErrorBoundary from "./Components/ErrorBoundaries"
+import PasswordProvider from './Contextes/PasswordContexte';
+
+import './Translation/i18n';
 
 
 ReactDOM.render(
   <BrowserRouter>
     <UserProvider>
+      <PasswordProvider>
         <CookiesProvider>
           <ErrorBoundary>
-            <App />
+
+              <App />
+
           </ErrorBoundary>
         </CookiesProvider>
+      </PasswordProvider>
     </UserProvider>
   </BrowserRouter>,
 

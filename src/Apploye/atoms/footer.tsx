@@ -1,13 +1,21 @@
+import { useTranslation } from "react-i18next";
 
 
 
 
 export default function Footer() {
 
-    return (
+    const { t, i18n } = useTranslation();
 
-        <footer className='footer'>
-            By clicking the button above, you agree to our terms of services and privacy policies
-        </footer>
+    
+    return (
+        <div>
+            <footer className='footer'>
+
+                {t("footer.0")}
+
+            </footer>
+        </div>
+
     )
 }
