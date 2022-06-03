@@ -25,11 +25,12 @@ export default function FormsPage() {
 
             {toggle ? <span>
 
-                <Login tpassword={""} setTpassword={""} />
+                <Registration tpassword={""} setTpassword={""} />
+
 
             </span> : <span>
 
-                <Registration />
+                <Login />
 
             </span>}
 

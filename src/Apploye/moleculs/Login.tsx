@@ -2,17 +2,8 @@ import { useState, useContext, useEffect } from 'react';
 import Form from 'react-bootstrap/Form'
 import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
-import { PasswordContext } from '../../Contextes/PasswordContexte';
-import CheckList from './checkList';
 
 
-
-export interface Password {
-
-    tpassword: string,
-    setTpassword: string
-
-};
 
 export type UserConnectForm = {
 
@@ -22,34 +13,10 @@ export type UserConnectForm = {
 };
 
 
-export default function Login(props: Password) {
+export default function Login() {
 
 
     const { register, handleSubmit, formState: { errors }, resetField, watch } = useForm<UserConnectForm>();
-
-
-    const [tpassword, setTpassword] = useState<Password>()
-    const [temail, setTemail] = useState<Password>()
-
-
-    console.log("useState psw:", tpassword)
-    console.log("useState email:", temail)
-
-
-    const {setPassword,setEmail} = useContext(PasswordContext);
-
-
-    useEffect(() => {
-
-        if (tpassword !== undefined) {
-
-            console.log("not undefined")
-            setPassword(tpassword)
-            setEmail(temail)
-
-        }
-
-    },[tpassword])
 
 
     const submitLogin = async (data: UserConnectForm) => {
@@ -63,15 +30,11 @@ export default function Login(props: Password) {
 
     return (
 
+        <div className='login'>
 
-        <Form onSubmit={handleSubmit(submitLogin)} className='formulaire' >
-            <div className='two-inputs'>
+            <Form onSubmit={handleSubmit(submitLogin)}  >
 
 
-
-            </div>
-
-            <div className='inputs-align'>
                 <Form.Group  >
                     <input
                         className='input-email'
@@ -83,7 +46,6 @@ export default function Login(props: Password) {
                                 validate: (value) =>
                                     value.includes('@') || "Veuillez inclure '@'",
                             })}
-                        onChange={(value: any) => setTemail(value.target.value)}
                     />
 
                     {errors.email && (
@@ -102,32 +64,30 @@ export default function Login(props: Password) {
                         type="password"
                         placeholder={t('Password.0')}
                         {...register('password')}
-                        onChange={(value: any) => setTpassword(value.target.value)}
                     />
 
                     <div className="invalid-feedback">{errors.password?.message}</div>
 
                 </Form.Group>
 
-                <CheckList />
 
                 <br />
 
-                <button className='button' style={{ width: 350, marginLeft: -120, marginTop: 10 }} type="submit">
+                <button className='button-submit' style={{ width: 300, marginLeft: -165, marginTop: 50 }} type="submit">
 
-                {t('Button.0')}
+                    {t('Button.0')}
 
                 </button>
 
-                <button className='button-Google' style={{ marginTop: 70 }} >
+                <button className='button-Google'  >
 
-                {t('ButtonGoogle.1')}
-                
+                    {t('ButtonGoogle.1')}
+
                 </button>
 
-            </div>
 
-        </Form>
+            </Form>
+        </div>
 
 
     )

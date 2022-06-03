@@ -1,10 +1,17 @@
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import Form from 'react-bootstrap/Form'
 import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 import Footer from '../atoms/footer';
+import CheckList from './checkList';
+import { PasswordContext } from '../../Contextes/PasswordContexte';
 
+export interface Password {
 
+    tpassword: string,
+    setTpassword: string
+
+};
 
 export type UserConnectForm = {
 
@@ -17,12 +24,31 @@ export type UserConnectForm = {
 
 
 
-export default function Registration() {
+export default function Registration(props: Password) {
 
 
     const { register, handleSubmit, formState: { errors } } = useForm<UserConnectForm>();
 
+    const { setPassword, setEmail } = useContext(PasswordContext);
+
+
+    const [tpassword, setTpassword] = useState<Password>()
+    const [temail, setTemail] = useState<Password>()
+
+
     const { t, i18n } = useTranslation();
+
+
+    useEffect(() => {
+
+        if (tpassword !== undefined) {
+
+            console.log("not undefined")
+            setPassword(tpassword)
+            setEmail(temail)
+
+        }
+    }, [tpassword])
 
 
     const submitLogin = async (data: UserConnectForm) => {
@@ -33,102 +59,102 @@ export default function Registration() {
 
     return (
 
-        <div className='' >
+        <div className='registration' >
 
-            <Form onSubmit={handleSubmit(submitLogin)} className='formulaire' >
-                <div className='two-inputs'>
-
-                    <Form.Group className="" >
-
-                        <input
-                            className='input-firstname'
-                            type="texte"
-                            placeholder={t('FirstName.0')}
-                            {...register('firstName')}
-                        />
-                    </Form.Group>
+            <Form onSubmit={handleSubmit(submitLogin)} >
 
 
-                    <Form.Group >
 
-                        <input
-                            className='input-lastName'
-                            type="texte"
-                            placeholder={t('LastName.0')}
-                            {...register('lastName',
-                                {
-                                    required: 'Enter your lastName !',
-                                    validate: (value) =>
-                                        value.includes('@') || "Veuillez inclure '@'",
-                                })}
-                        />
+                <Form.Group style={{ marginLeft: -199, justifyContent: "space-between" }}>
 
-                        {errors.lastName && (
+                    <input
+                        className='input-firstname'
+                        type="texte"
+                        placeholder={t('FirstName.0')}
+                        {...register('firstName')}
+                    />
 
-                            <div className="error">
-                                <p className='error-lastName' >{errors.lastName && errors.lastName.message}</p>
-                            </div>
+                    <input
+                        className='input-lastName'
+                        type="texte"
+                        placeholder={t('LastName.0')}
+                        {...register('lastName',
+                            {
+                                required: 'Enter your lastName !',
+                                validate: (value) =>
+                                    value.includes('@') || "Veuillez inclure '@'",
+                            })}
+                    />
 
-                        )}
-                    </Form.Group>
+                    {errors.lastName && (
 
-                </div>
+                        <div className="error">
+                            <p className='error-lastName' >{errors.lastName && errors.lastName.message}</p>
+                        </div>
 
-                <div className='inputs-align'>
-                    <Form.Group  >
-                        <input
-                            className='input-email'
-                            type="email"
-                            placeholder="E-mail..."
-                            {...register('email',
-                                {
-                                    required: 'Enter your email !',
-                                    validate: (value) =>
-                                        value.includes('@') || "Veuillez inclure '@'",
-                                })}
-                        />
+                    )}
+                </Form.Group>
 
-                        {errors.email && (
 
-                            <div className="error">
-                                <p className='error-email' >{errors.email && errors.email.message}</p>
-                            </div>
 
-                        )}
-                    </Form.Group>
+                <Form.Group  >
+                    <input
+                        className='input-email'
+                        type="email"
+                        placeholder="E-mail..."
+                        {...register('email',
+                            {
+                                required: 'Enter your email !',
+                                validate: (value) =>
+                                    value.includes('@') || "Veuillez inclure '@'",
+                            })}
+                        onChange={(value: any) => setTemail(value.target.value)}
 
-                    <Form.Group >
-                        <input
-                            className='input-password'
-                            type="password"
-                            placeholder={t('Password.0')}
-                            {...register('password',
-                                {
-                                    required: 'Enter your passsword !',
+                    />
 
-                                })}
-                        />
+                    {errors.email && (
 
-                        {errors.password && (
+                        <div className="error">
+                            <p className='error-email' >{errors.email && errors.email.message}</p>
+                        </div>
 
-                            <div className="error">
-                                <p className='error-password' >{errors.password && errors.password.message}</p>
-                            </div>
+                    )}
+                </Form.Group>
 
-                        )}
-                    </Form.Group>
-                </div>
+                <Form.Group >
+                    <input
+                        className='input-password'
+                        type="password"
+                        placeholder={t('Password.0')}
+                        {...register('password',
+                            {
+                                required: 'Enter your passsword !',
+
+                            })}
+                        onChange={(value: any) => setTpassword(value.target.value)}
+
+                    />
+
+                    {errors.password && (
+
+                        <div className="error">
+                            <p className='error-password' >{errors.password && errors.password.message}</p>
+                        </div>
+
+                    )}
+                </Form.Group>
+                <CheckList />
 
                 <br />
 
 
-                <button className='button' style={{ width: 350, marginLeft: -375, marginTop: 50 }} type="submit">
+                <button className='button-submit' style={{ marginLeft: -165, width: 300, marginTop: -4 }} type="submit">
 
                     {t("Button.0")}
 
                 </button>
 
-                <button className='button-Google'>
+                <button className='button-Google'  >
 
                     {t("ButtonGoogle.0")}
 
