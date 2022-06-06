@@ -7,7 +7,7 @@ export default function Footer() {
 
     const { t, i18n } = useTranslation();
 
-    
+
     return (
         <div>
             <footer className='footer'>

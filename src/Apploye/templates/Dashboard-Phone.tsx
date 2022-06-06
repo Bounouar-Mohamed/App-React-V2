@@ -1,17 +1,17 @@
 import FormsPage from '../organisms/forms-page';
 import TranslationButton from '../../Translation/Translation-Button';
-import { positions } from '@mui/system';
+import { relative } from 'path';
 
 
 export default function Phone() {
 
     return (
 
-        <div className='Dashboard-Phone' style={{ marginLeft: -250, marginTop: 140 }}>
+        <div className='body-phone' >
 
             <FormsPage />
 
-            <div className='Button-Phone' style={{position:'relative', marginTop:150,marginLeft:-300 }}>
+            <div className='$' style={{marginLeft:-1030, marginTop:300, position:'fixed'}}>
                 <TranslationButton />
             </div>
 

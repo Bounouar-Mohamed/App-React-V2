@@ -13,7 +13,7 @@ export default function Desktop() {
 
 
 
-        <div className='body-twitter' >
+        <div className='body-desktop' >
 
             <Description />
 

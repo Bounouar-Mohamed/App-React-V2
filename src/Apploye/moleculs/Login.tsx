@@ -63,23 +63,31 @@ export default function Login() {
                         className='input-password'
                         type="password"
                         placeholder={t('Password.0')}
-                        {...register('password')}
+                        {...register('password',
+                            {
+                                    required:'Enter your password!'
+                            })}
                     />
+                    {errors.password && (
 
-                    <div className="invalid-feedback">{errors.password?.message}</div>
+                        <div className="error">
+                            <p className='error-email' >{errors.password && errors.password.message}</p>
+                        </div>
+
+                    )}
 
                 </Form.Group>
 
 
                 <br />
 
-                <button className='button-submit' style={{ width: 300, marginLeft: -165, marginTop: 50 }} type="submit">
+                <button className='button-submit' style={{  marginTop: 0 }} type="submit">
 
                     {t('Button.0')}
 
                 </button>
 
-                <button className='button-Google'  >
+                <button className='button-Google' style={{marginTop: 80}}  >
 
                     {t('ButtonGoogle.1')}
 

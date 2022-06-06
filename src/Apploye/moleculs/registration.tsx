@@ -148,13 +148,13 @@ export default function Registration(props: Password) {
                 <br />
 
 
-                <button className='button-submit' style={{ marginLeft: -165, width: 300, marginTop: -4 }} type="submit">
+                <button className='button-submit' style={{ marginTop: 210 }} type="submit">
 
                     {t("Button.0")}
 
                 </button>
 
-                <button className='button-Google'  >
+                <button className='button-Google' style={{marginTop:50}} >
 
                     {t("ButtonGoogle.0")}
 
