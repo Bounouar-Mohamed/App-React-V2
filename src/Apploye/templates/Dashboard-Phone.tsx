@@ -1,6 +1,5 @@
 import FormsPage from '../organisms/forms-page';
 import TranslationButton from '../../Translation/Translation-Button';
-import { relative } from 'path';
 
 
 export default function Phone() {
@@ -11,7 +10,7 @@ export default function Phone() {
 
             <FormsPage />
 
-            <div className='$' style={{marginLeft:-1030, marginTop:300, position:'fixed'}}>
+            <div className='Translation-phone' >
                 <TranslationButton />
             </div>
 

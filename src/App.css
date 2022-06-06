@@ -94,6 +94,8 @@
   left: 75%;
 }
 
+/* Apploye */
+
 .body-desktop {
   box-sizing: border-box;
   min-height: 100vh;
@@ -205,7 +207,7 @@
 .button-submit {
   position: absolute;
   margin-left: -179px;
-  border-radius: 5%;
+  border-radius: 10px;
   height: 50px;
   top: 160px;
   width: 250px;
@@ -228,8 +230,9 @@
   background-repeat: no-repeat;
   background-color: white;
   background-position: 9%;
+  border:1px solid ;
   position: relative;
-  border-radius: 5%;
+  border-radius: 10px;
   left: -66%;
   height: 50px;
   width: 250px;
@@ -238,39 +241,42 @@
 }
 
 @media only screen and (min-width: 1000px) and (max-width: 2000px) {
-  .destock {
+  .desktop {
     margin-left: 75vh;
+    min-height: 600px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: white;
   }
 }
 
 @media only screen and (min-width: 700px) and (max-width: 950px) {
-  .destock {
-    margin-top:190px ;
+  .desktop {
+    margin-top: 190px;
     margin-left: 20vh;
   }
 }
+@media only screen and (min-width: 540px) and (max-width: 699px) {
+  .desktop {
+    margin-top: 10px;
+    margin-left: 15vh;
+  }
+}
 
-@media only screen and (min-width: 300px) and (max-width: 690px) {
-  .destock {
-    margin-top:50px ;
+@media only screen and (min-width: 300px) and (max-width: 539px) {
+  .desktop {
+    margin-top: -5px;
     margin-left: 3vh;
   }
 }
-
 @media only screen and (max-width: 290px) {
-  .destock {
-    margin-left: -3vh;
-    max-width: 100%;
+  .desktop {
+    margin-left: -5vh;
   }
 }
-
-.destock {
+.desktop {
   position: "relative";
-  background-color: white;
   border-radius: 10px;
   min-width: 350px;
-  min-height:600px ;
 }
 
 .describe-text {
@@ -300,33 +306,73 @@
   width: 200px;
 }
 
+@media only screen and (min-width: 1000px) and (max-width: 2000px) {
+  .footer {
+    width: 351px;
+    margin-left: -504px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}
 @media only screen and (min-width: 700px) and (max-width: 950px) {
   .footer {
     width: 300px;
-    left: 10vh;
+    margin-left: -480px;
   }
 }
-@media only screen and (max-width: 290px) {
-  .footer {
-    width: 300px;
-  }
-}
-@media only screen and (min-width: 291px) and (max-width:700px) {
+@media only screen and (min-width: 291px) and (max-width: 700px) {
   .footer {
     width: 330px;
+    margin-left: -504px;
+  }
+}
+@media only screen and (min-width: 1px) and (max-width: 290px) {
+  .footer {
+    width: 300px;
+    margin-left: -475px;
   }
 }
 .footer {
   background-color: rgb(239, 239, 239);
-  margin-left: -504px;
   margin-top: 520px;
   font-size: 13px;
+  text-align: center;
 }
 
 .CheckList {
   position: relative;
   margin-top: 30px;
   margin-left: -190px;
+}
+
+.Translation-button {
+  min-width: 160px;
+  margin-left: 140vh;
+  margin-top: -90vh;
+}
+@media only screen and (max-width: 280px) {
+  .Translation-button {
+    margin-left: -70%;
+    margin-top: 2vh;
+  }
+}
+@media only screen and (min-width: 281px) and (max-width: 539px) {
+  .Translation-button {
+    margin-left: -50%;
+    margin-top: 2vh;
+  }
+}
+@media only screen and (min-width: 540px) and (max-width: 700px) {
+  .Translation-button {
+    margin-left: -25%;
+    margin-top: 2vh;
+  }
+}
+@media only screen and (min-width: 701px) and (max-width: 1100px) {
+  .Translation-button {
+    margin-left: 5%;
+    margin-top: 2vh;
+  }
 }
 
 .button-fr {
@@ -336,7 +382,6 @@
   border-bottom-left-radius: 10px;
   border-color: transparent;
 }
-
 .button-fr:focus {
   background-color: #48c029;
   border-top-right-radius: 10px;
@@ -351,13 +396,9 @@
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-
 .button-en:focus {
   background-color: #48c029;
   color: white;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-}
-.button-en:link {
-  background-color: lightblue;
 }

@@ -18,7 +18,7 @@ export default function FormsPage() {
 
     return (
 
-        <div className='destock'>
+        <div className='desktop'>
 
 
             <Switch  handleChange={toggler}  />
