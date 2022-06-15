@@ -1,4 +1,4 @@
-import { useTranslation } from "react-i18next";
+import { useTranslation,initReactI18next } from "react-i18next";
 import SwitchSelector from "react-switch-selector";
 
 
@@ -9,7 +9,7 @@ export interface toogle {
 }
 
 
-export default function Switch(props: toogle) {
+export default function ButtonSwitch(props: toogle) {
 
     const { t, i18n } = useTranslation();
 
@@ -22,7 +22,8 @@ export default function Switch(props: toogle) {
             },
             selectedBackgroundColor: "#48C029",
             selectedColor: '#ffffff',
-            Color:'#ffffff'
+            Color:'#ffffff',
+        
 
         },
         {

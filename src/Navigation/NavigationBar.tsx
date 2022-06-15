@@ -8,7 +8,7 @@ import LogoutIcon from '@mui/icons-material/Logout';
 
 
 
-export default function Navigation() {
+export default function NavBar() {
 
 
   return (

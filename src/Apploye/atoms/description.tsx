@@ -6,13 +6,7 @@ import { useTranslation } from "react-i18next";
 
 export default function Desciption() {
 
-
-    // const changeLanguage = (lng: any) => {
-    //     i18n.changeLanguage(lng);
-    // }
-
     const { t, i18n } = useTranslation();
-
 
     return (
         

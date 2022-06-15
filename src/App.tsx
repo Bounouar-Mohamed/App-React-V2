@@ -7,21 +7,19 @@ import {
 import UsersTable from './Pages/Users';
 import Acceuil from './Pages/acceuil';
 import Profile from "./Pages/profile"
-import Navigation from "./Navbar/Navigation";
+import NavBar from "./Navigation/NavigationBar";
 import Inscription from "./Pages/inscription";
 import Connexion from './Pages/Connexion';
 import Desktop from "./Apploye/templates/Dashboard-Desktop";
 import { useMediaQuery } from 'react-responsive'
 import Phone from "./Apploye/templates/Dashboard-Phone";
-import { useState } from "react";
-import { FieldNamesMarkedBoolean } from "react-hook-form";
-import useEffect from 'react';
+
 
 
 function App() {
 
   const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 1224px)' })
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
+
 
 
   return (
@@ -29,7 +27,7 @@ function App() {
 
     <div>
 
-      <Navigation />
+      <NavBar />
 
 
       <Routes>
