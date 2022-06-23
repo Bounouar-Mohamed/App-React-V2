@@ -32,33 +32,25 @@ function App() {
 
       <Routes>
 
-<<<<<<< HEAD
         <Routes>
-=======
-        <Route path="/" element={<Acceuil />} />
-        <Route path="/Profile" element={<Profile />} />
-        <Route path="/inscription" element={<Inscription />} />
-        <Route path="/users" element={<UsersTable />} />
-        {isDesktopOrLaptop ?
-          <Route path="/apploye" element={<Desktop />} />
-          :  <Route path="/apploye" element={<Phone />} />}
-        <Route path="/connexion" element={<Connexion email={""} password={""} />} />
->>>>>>> 269bce89bda9e119de28adc4ba827f21facea7be
 
+          <Route path="/" element={<Acceuil />} />
+          <Route path="/Profile" element={<Profile />} />
+          <Route path="/inscription" element={<Inscription />} />
+          <Route path="/users" element={<UsersTable />} />
+          {isDesktopOrLaptop ?
+            <Route path="/apploye" element={<Desktop />} />
+            : <Route path="/apploye" element={<Phone />} />}
+          <Route path="/connexion" element={<Connexion email={""} password={""} />} />
+
+
+        </Routes>
 
       </Routes>
 
-<<<<<<< HEAD
-        </Routes>
-=======
->>>>>>> 269bce89bda9e119de28adc4ba827f21facea7be
     </div>
-
-
 
   )
 }
 
-
 export default App;
-
