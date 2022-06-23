@@ -5,14 +5,12 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, BrowserRouter as Router } from 'react-router-dom';
 import UserProvider from './Contextes/UsersContexte';
 import { CookiesProvider } from "react-cookie";
-<<<<<<< HEAD
+
 import ErrorBoundary from './Components/ErrorBoundaries';
-=======
-import ErrorBoundary from "./Components/ErrorBoundaries"
 import PasswordProvider from './Contextes/PasswordContexte';
 
 import './Translation/i18n';
->>>>>>> 269bce89bda9e119de28adc4ba827f21facea7be
+
 
 
 ReactDOM.render(
