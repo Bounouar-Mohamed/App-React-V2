@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import "../App.css";
 import { Image } from 'semantic-ui-react'
-import img from '../articles/Cartouche.jpg'
+import img from '../Assets/Cartouche.jpg'
 import { Popover } from 'antd';
 import "antd/dist/antd.css";
 import axios from 'axios';

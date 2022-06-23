@@ -8,7 +8,7 @@ import LogoutIcon from '@mui/icons-material/Logout';
 
 
 
-export default function Navigation() {
+export default function NavBar() {
 
 
   return (
@@ -33,6 +33,7 @@ export default function Navigation() {
             <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>
             <NavDropdown.Item href="/connexion">Connexion</NavDropdown.Item>
             <NavDropdown.Item href="/inscription">Inscription</NavDropdown.Item>
+            <NavDropdown.Item href="/apploye">Apploye</NavDropdown.Item>
             <NavDropdown.Item href="/users">Users</NavDropdown.Item>
 
           </NavDropdown>
@@ -43,7 +44,5 @@ export default function Navigation() {
 
     </Navbar>
 
-
   )
 }
-
