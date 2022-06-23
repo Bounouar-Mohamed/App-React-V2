@@ -65,7 +65,7 @@ export default function Login() {
                         placeholder={t('Password.0')}
                         {...register('password',
                             {
-                                    required:'Enter your password!'
+                                required: 'Enter your password!'
                             })}
                     />
                     {errors.password && (
@@ -81,13 +81,13 @@ export default function Login() {
 
                 <br />
 
-                <button className='button-submit' style={{  marginTop: 0 }} type="submit">
+                <button className='button-submit' style={{ marginTop: 0 }} type="submit">
 
                     {t('Button.0')}
 
                 </button>
 
-                <button className='button-Google' style={{marginTop: 80}}  >
+                <button className='button-Google' style={{ marginTop: 80 }}  >
 
                     {t('ButtonGoogle.1')}
 

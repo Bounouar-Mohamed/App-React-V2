@@ -1,7 +1,5 @@
-import Login from "./Login";
 import { useContext, useEffect, useState } from 'react';
 import { PasswordContext } from '../../Contextes/PasswordContexte';
-import PasswordProvider from '../../Contextes/PasswordContexte';
 import { useTranslation } from "react-i18next";
 
 
@@ -11,7 +9,7 @@ export default function CheckList() {
     const { password } = useContext(PasswordContext);
 
     const [lenght, setLenght] = useState<string | number>("")
-    const [pattern, setPattern] = useState<boolean>()
+
 
 
     useEffect(() => {

@@ -1,5 +1,5 @@
 import { useState } from "react"
-import Switch from "../atoms/button-switch"
+import ButtonSwitch from "../atoms/button-switch"
 import Login from "../moleculs/Login"
 import Registration from "../moleculs/registration"
 
@@ -21,7 +21,7 @@ export default function FormsPage() {
         <div className='desktop'>
 
 
-            <Switch  handleChange={toggler}  />
+            <ButtonSwitch  handleChange={toggler}  />
 
             {toggle ? <span>
 
