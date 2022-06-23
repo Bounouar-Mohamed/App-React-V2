@@ -30,7 +30,7 @@ function App() {
       <NavBar />
 
 
-      <Routes>
+
 
         <Routes>
 
@@ -46,7 +46,7 @@ function App() {
 
         </Routes>
 
-      </Routes>
+
 
     </div>
 

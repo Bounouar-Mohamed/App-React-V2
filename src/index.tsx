@@ -20,7 +20,7 @@ ReactDOM.render(
         <CookiesProvider>
           <ErrorBoundary>
 
-              <App />
+            <App />
 
           </ErrorBoundary>
         </CookiesProvider>
