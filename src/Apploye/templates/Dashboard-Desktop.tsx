@@ -12,7 +12,6 @@ export default function Desktop() {
     return (
 
 
-
         <div className='body-desktop' >
 
             <Description />
