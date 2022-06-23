@@ -3,7 +3,7 @@ import Description from "../atoms/description"
 import Apploye from '../../Assets/image_2022-05-29_013223347 (1).jpg'
 import Logo from '../../Assets/logo-Apploye.svg'
 import TranslationButton from '../../Translation/Translation-Button';
-import ButtonSwitch from 'npm-test-button-switch'
+
 
 export default function Desktop() {
 
@@ -22,11 +22,7 @@ export default function Desktop() {
             <FormsPage />
 
             <TranslationButton />
-
-            <ButtonSwitch />
-
-
-
+            
 
         </div>
 

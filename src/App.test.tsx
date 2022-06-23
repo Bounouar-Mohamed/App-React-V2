@@ -8,15 +8,13 @@ import UserProvider from './Contextes/UsersContexte'
 import PasswordProvider from './Contextes/PasswordContexte';
 import NavBar from './Navigation/NavigationBar';
 import { BrowserRouter, BrowserRouter as Router } from 'react-router-dom';
-
-<<<<<<< HEAD
-
+import Inscription from './Pages/inscription';
 
 
-describe("<App />", () => {
-=======
+
+
 describe("Testing Login to forms", () => {
->>>>>>> 269bce89bda9e119de28adc4ba827f21facea7be
+
   test("devrait afficher un formulaire de connexion vide", async () => {
     render(
       <Router>
@@ -89,4 +87,3 @@ describe("Testing NavBar", () => {
     );
   });
 });
-
